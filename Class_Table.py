@@ -150,9 +150,9 @@ class Table:
         str_table=(''.join([len_style.format(*i)+'\n' for i in self.table]))[:-2]
         return 'Созданная таблица с '+str(self.lines)+' строками, и '+str(self.pillars)+' столбцами:\n'+str_table
 
-    def saveinfile(self,name='Problem_1'):
+    def saveinfile(self,name='Table_1'):
         '''Сохрание таблицы в файл формата txt.
-        Если имя файла не указано, таблица сохраняется в файл Problem_1.txt'''
+        Если имя файла не указано, таблица сохраняется в файл Table_1.txt'''
         if type(name)!=str:
             raise TableError('Название файла должно быть строчной переменной')
         with open(name+'.txt','w') as output:
